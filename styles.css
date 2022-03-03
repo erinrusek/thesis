@@ -34,3 +34,31 @@ ul {
     padding: 100px 100px;
     display: block;
 }
+
+/* getinvolved/badend/1.html */
+
+.listone {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 25pt;
+    padding: 70px 210px;
+}
+
+/* getinvolved/badend/3.html */
+.three {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30pt;
+    padding: 200px 290px;
+}
+
+/* getinvolved/badend/4.html */
+.four {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 40pt;
+    padding: 80px 290px;
+}
