@@ -174,3 +174,130 @@ ul {
     margin: -90px 200px;
     padding: 0px 0px;
 }
+
+/* getinvolved/badend/18.html*/
+.inner-grid {
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 0.5s infinite alternate;
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+  /* getinvolved/badend/22.html --> scary FTC notice */
+
+  #bgtwo {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bgtwo img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 8%;
+  }
+
+  .ftc {
+      color: red;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 0px 100px;
+  }
+
+  .attention {
+      text-align: center;
+      font-size: 50px;
+  }
+  
+  .attentiontwo {
+      text-align: center;
+      font-size: 25px;
+      margin: 0px 300px;
+      line-height: 30px;
+  }
+
+  .attentionthree {
+    text-align: center;
+    font-size: 8px;
+    margin: 0px 300px;
+    line-height: 30px;
+    color: red;
+}
+
+  /* getinvolved/badend/23.html --> scary FTC notice */
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid white;
+}
+input[type='checkbox']:checked {
+    background: #36575c;
+}
+
+
+#bgthree {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bgthree img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 3%;
+  }
+
+/* getinvolved/badend/24.html --> scary FTC notice */
+
+#bgfour {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bgfour img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 10%;
+  }
