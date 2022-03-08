@@ -301,3 +301,126 @@ input[type='checkbox']:checked {
     min-height: 50%;
     opacity: 10%;
   }
+
+  /* getinvolved/badend/30.html */
+
+  #bgfive {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bgfive img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 11%;
+  }
+
+
+  .buttonspace {
+    width: 190px;
+    height: 22px;
+    margin: 0;
+}
+
+.bone {
+    float: left;
+    height: 87px;
+    margin: -100px 0px 0px 640px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #18ab58,
+            0 0 0.8rem #18ab58,
+            0 0 2.8rem #18ab58,
+            inset 0 0 1.3rem #18ab58; 
+
+    
+}
+/* https://css-tricks.com/how-to-create-neon-text-with-css/ */
+
+.btwo {
+    float: right;
+    height: 22px;
+    margin: -100px 700px 0px 0px;
+}
+
+#bgfive {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bgfive img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 11%;
+  }
+
+    /* getinvolved/badend/30.html */
+
+    #bgsix {
+      position: fixed; 
+      top: -50%; 
+      left: -50%; 
+      width: 200%; 
+      height: 200%;
+      z-index: -10;
+    }
+    #bgsix img {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      margin: auto; 
+      min-width: 50%;
+      min-height: 50%;
+      opacity: 13%;
+    }
+
+    /* getinvolved/badend/32.html */
+
+    #bgseven {
+      position: fixed; 
+      top: -50%; 
+      left: -50%; 
+      width: 200%; 
+      height: 200%;
+      z-index: -10;
+    }
+    #bgseven img {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      margin: auto; 
+      min-width: 50%;
+      min-height: 50%;
+      opacity: 15%;
+    }
+
+    .redo {
+      font-family: 'Noto Sans', sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 12pt;
+      padding: 25px 150px;
+  }
+  
