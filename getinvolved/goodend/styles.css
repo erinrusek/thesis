@@ -2,16 +2,21 @@
     background-color: transparent;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 20px 0px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
     cursor: pointer;
+    outline: 5px solid white;
+    font-family: 'Libre Franklin', sans-serif;
+    width: 20%;
 }
   
-  .button2 {background-color: transparent; outline: 2px solid white;} /* Blue */
-  .button3 {background-color: #f44336;} /* Red */ 
-  .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
-  .button5 {background-color: #555555;} /* Black */  
+  .button2 {background-color: transparent; outline: 5px solid white; font-family: 'Libre Franklin', sans-serif;} /* Blue */
+  .button3 {background-color: transparent; outline: 5px solid white; font-family: 'Libre Franklin', sans-serif;} /* Red */ 
+  .button4 {background-color: transparent; outline: 5px solid white; font-family: 'Libre Franklin', sans-serif;} /* Gray */ 
+  .button5 {background-color: transparent; outline: 5px solid white; font-family: 'Libre Franklin', sans-serif;} /* Black */  
