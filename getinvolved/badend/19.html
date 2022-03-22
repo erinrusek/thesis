@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+     <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+ 
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -58,10 +63,50 @@
 
 
     <!-- body text -->
-    <div class="main" style="margin: 0px; padding-bottom: 20px;">
-      <b>Cool, Right?</b> <br></div>
-     <div class="three" style="padding-top: 0px;"> Here are some of the features you can expect to see if you are selected to join the beta testing program:    </div>
 
+   <!-- blotter  -->
+
+ <div class="containerchannel1">
+  <div class="blotter-textchannel1"></div>
+</div>
+
+    <script>
+       var text = new Blotter.Text("Cool, right?"  , {
+            size: 70,
+            weight: 700,
+            fill: "#fff",
+            width: 700,
+        })
+
+        var material = new Blotter.ChannelSplitMaterial();
+        material.uniforms.uOffset.value = 0.07;
+        material.uniforms.uRotation.value = 70;
+        material.uniforms.uApplyBlur.value = 1; // 0 false, 1 true
+        material.uniforms.uAnimateNoise.value = .3;
+
+
+        var blotter = new Blotter(material, {
+            texts: text
+        })
+
+        let scope = blotter.forText(text)
+        let blotter_text_container = document.querySelector('.blotter-textchannel1')
+        scope.appendTo(blotter_text_container)
+        let x_center,  y_center
+
+        document.onmousemove = moveIt;
+      function moveIt(event) {
+
+
+            material.uniforms.uRotation.value = (event.clientX * .1);
+            material.uniforms.uOffset.value = (event.clientX * .0001);
+
+        }
+  </script>
+
+    <div class="main" style="margin: 0px; padding-bottom: 20px;">
+     <div class="three" style="padding-top: 0px;"> Here are some of the features you can expect to see if you are selected to join the beta testing program:    </div>
+</div>
     <div class="navarrows" style="padding-top: 20px;">
         <a href="18.html">
             <img alt="lefta arrow" src="../../img/leftarrow.png"

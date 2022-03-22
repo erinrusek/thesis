@@ -23,6 +23,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+    <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/slidingDoorMaterial.min.js"></script>
+ 
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -61,9 +66,51 @@
         </ul>
 
 
+         <!-- blotter  -->
+
+ <div class="containerrolling">
+  <div class="blotter-textrolling"></div>
+</div>
+
+
+    <script>
+      const text = new Blotter.Text("Now just click this fun button:", {
+          size: 50,
+          weight: 50,
+          fill: 'white',
+          paddingLeft: 80,
+          paddingRight: 80,
+  
+      
+      })
+
+      let material = new Blotter.SlidingDoorMaterial()
+        material.uniforms.uDivisions.value = 2; 
+        material.uniforms.uDivisionWidth.value = .2; 
+        material.uniforms.uAnimateHorizontal.value = 1; 
+        material.uniforms.uFlipAnimationDirection.value = 1; 
+        material.uniforms.uSpeed.value = .1; 
+
+
+      let blotter = new Blotter(material, { texts: text })
+
+      let scope = blotter.forText(text)
+      let blotter_text_container = document.querySelector('.blotter-textrolling')
+      scope.appendTo(blotter_text_container)
+      let x_center,  y_center
+
+      document.onmousemove = moveIt;
+    function moveIt(event) {
+
+        material.uniforms.uVolatility.value = (event.clientX * .00002);
+        material.uniforms.uNoiseDistortAmplitude.value = (event.clientX * .011);
+        material.uniforms.uSpeed.value = (event.clientX * .00001);
+    }
+  </script>
+
     <!-- body text -->
-    <div class="four">Now just click this fun button:<br>
-      <div class="echo" style="font-size: 10px;">(By clicking this button, you are agreeing to Quick Connect's terms and conditions)</div>
+    <div class="four">
+      <div class="echo" style="font-size: 10px;">(By submitting, you are agreeing to Quick Connect's terms and conditions)</div>
         
     </div>
 

@@ -19,6 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+     <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -56,7 +60,7 @@
           <li><a href="about/index.html">About</a></li> -->
         </ul>
 
-        <img src="../../img/white_smiley.png" alt="Paris"
+        <img src="../../img/whiteglitch.gif" alt="Paris"
         style="position: fixed;
         z-index: -3;
         width: 40%;
@@ -64,17 +68,53 @@
 
     <!-- body text -->
     <div class="main">
-      So, you want to meet people? We can absolutely promise that you will. 
-      <div class="one"> But of course, we just need some things from you in order to make sure this happens   </div>
+      So, you want to meet people?
+      
+      
+      
+       <!-- blotter  -->
+
+       <div class="container6">
+        <div class="blotter-text6"></div>
+      </div>
+
+<script>
+  const text = new Blotter.Text("We promise you will.", {
+      size: 45,
+      weight: 500,
+      fill: 'white',  
+  })
+
+  let material = new Blotter.LiquidDistortMaterial()
+    material.uniforms.uVolatility.value = .01;
+    material.uniforms.uSpeed.value = .01;
+    material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+  let blotter = new Blotter(material, { texts: text })
+
+  let scope = blotter.forText(text)
+  let blotter_text_container = document.querySelector('.blotter-text6')
+  scope.appendTo(blotter_text_container)
+  let x_center,  y_center
+
+  document.onmousemove = moveIt;
+function moveIt(event) {
+
+    material.uniforms.uVolatility.value = (event.clientX * .00001);
+    material.uniforms.uSpeed.value = (event.clientX * .001);
+    material.uniforms.uSeed.value = (event.clientX * .00001);
+}
+</script>
+      <div class="one" style="height: 20px;"> But of course, we just need some things from you in order to make sure this happens   </div>
 </div>
 
     <div class="navarrows">
         <a href="24.html">
-            <img alt="Qries" src="../../img/leftarrow.png"
+            <img alt="Qries" src="../../img/leftarrow1.gif"
             width="10%" height="auto" style="float: left; padding-left: 400px; padding-top: 0;">
          </a> 
          <a href="26.html">
-            <img alt="Qries" src="../../img/rightarrow.png"
+            <img alt="Qries" src="../../img/rightarrow1.gif"
             width="10%" height="auto" style="float: left; padding-left: 400px;">
          </a>
     </div>

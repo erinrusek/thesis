@@ -854,3 +854,110 @@ to   { opacity: 1; }
   font-size: 55pt;
   color: #ff003c;
 }
+
+/* BLOTTER on 25.html  */
+.container6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.blotter-text6{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 30pt;
+}
+
+/* BLOTTER on 27.html  */
+.container7{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  padding-bottom: 20px;
+}
+
+.blotter-text7{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 30pt;
+  padding-top: 40px;
+}
+
+/* CHANNEL SPLIT BLOTTER on BADEND 2.html  */
+
+.containerchannel{
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2px;
+  padding-top: 20em;
+
+}
+
+.blotter-textchannel{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 50px;
+
+}
+
+/* CHANNEL SPLIT BLOTTER on BADEND 2.html  */
+
+.containerchannel1{
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2px;
+  padding-top: 10em;
+
+}
+
+.blotter-textchannel1{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 5px;
+
+}
+
+/* ROLLING BLOTTER on  23.html  */
+
+.containerrolling{
+  /* display: flex; */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding-top: 15em;
+  /* margin-left: 200em;
+  margin-right: 400em; */
+
+}
+
+.blotter-textrolling{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  /* padding-bottom: 0px; */
+  padding: 20px 0px 0px 0px;
+
+
+}
