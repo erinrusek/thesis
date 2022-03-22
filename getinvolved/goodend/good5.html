@@ -20,6 +20,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+     <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+ 
+ 
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -58,6 +64,41 @@
         </ul>
 
 
+<!-- blotter  -->
+
+<div class="container5">
+  <div class="blotter-text5"></div>
+</div>
+
+
+    <script>
+      const text = new Blotter.Text("TRUST", {
+          size: 400,
+          weight: 600,
+          fill: '#9c1208',
+      })
+
+      let material = new Blotter.LiquidDistortMaterial()
+        material.uniforms.uVolatility.value = .01;
+        material.uniforms.uSpeed.value = .01;
+        material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+      let blotter = new Blotter(material, { texts: text })
+
+      let scope = blotter.forText(text)
+      let blotter_text_container = document.querySelector('.blotter-text5')
+      scope.appendTo(blotter_text_container)
+      let x_center,  y_center
+
+      document.onmousemove = moveIt;
+    function moveIt(event) {
+
+        material.uniforms.uVolatility.value = (event.clientX * .00008);
+        material.uniforms.uSpeed.value = (event.clientX * .012);
+        material.uniforms.uSeed.value = (event.clientX * .000012);
+    }
+  </script>
+
      <!-- body text -->
      <div class="main" style="margin-top: 5%;">
         Trust is a <a href="../trueend/index.html">two-way</a>  street. Perhaps you can give us a second chance when Quick Connect launches.    
@@ -68,8 +109,8 @@
               width="10%" height="auto" style="float: left; padding-left: 400px;">
            </a>  -->
            <a href="goodend.html">
-              <img alt="Qries" src="../../img/rightarrow.png"
-              width="10%" height="auto" >
+              <img alt="Qries" src="../../img/rightarrow3.gif"
+              width="20%" height="auto" >
            </a>
       </div>
 

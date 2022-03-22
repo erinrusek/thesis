@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+
+    <!-- BLOTTER.JS  -->
+    <script src="../../blotter.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -57,8 +62,46 @@
         </ul>
 
 
+
+<!-- BLOTTER TEXT  -->
+<!-- <script>
+   var text = new Blotter.Text("Bro", {
+            family: 'Montserrat',
+            size: 300,
+            fill: "#000",
+            paddingLeft: 80,
+            paddingRight: 80,
+            paddingTop: 80,
+            paddingBottom: 80,
+        })
+
+        var material = new Blotter.LiquidDistortMaterial();
+        material.uniforms.uVolatility.value = 0.05;
+        material.uniforms.uSeed.value = 50;
+        material.uniforms.uSpeed.value = 1; // 0 false, 1 true
+
+
+        var blotter = new Blotter(material, {
+            texts: text
+        })
+
+        var scope = blotter.forText(text);
+
+        scope.appendTo(document.body);
+
+        document.onmousemove = moveIt;
+        function moveIt(event) {
+
+            material.uniforms.uRotation.value = (event.clientX * .11);
+            material.uniforms.uOffset.value = (event.clientX * .0001);
+
+        }
+</script> -->
+
+
+
     <!-- body text -->
-    <img src="../../img/white_smiley_d.png" alt="Paris"
+    <img src="../../img/whiteglitch_d.gif" alt="Paris"
     style="
     z-index: -3;
     width: 10%;
@@ -68,7 +111,44 @@
     margin-bottom: -170px;
     margin-top: 80px;">
     
-        <div class="one" style="padding-top: 200px;"> Hello. It seems you’re not complying with our basic data needs.</div>   
+
+    <!-- blotter  -->
+
+    <div class="container">
+      <div class="blotter-text"></div>
+    </div>
+    
+        <script>
+
+
+          const text = new Blotter.Text('Hello. It seems you’re not complying with our basic data needs.', {
+              size: 30,
+              weight: 700,
+              fill: 'white',
+          })
+
+          let material = new Blotter.LiquidDistortMaterial()
+            material.uniforms.uVolatility.value = .01;
+            material.uniforms.uSpeed.value = .01;
+            material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+          let blotter = new Blotter(material, { texts: text })
+
+          let scope = blotter.forText(text)
+          let blotter_text_container = document.querySelector('.blotter-text')
+          scope.appendTo(blotter_text_container)
+          let x_center,  y_center
+
+          document.onmousemove = moveIt;
+        function moveIt(event) {
+
+            material.uniforms.uVolatility.value = (event.clientX * .00001);
+            material.uniforms.uSpeed.value = (event.clientX * .001);
+            material.uniforms.uSeed.value = (event.clientX * .0001);
+        }
+      </script>
+
+        
 
     <div class="navarrows">
          <a href="good2.html">

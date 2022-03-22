@@ -21,6 +21,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+    <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+ 
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -75,10 +80,44 @@
 
 
     <!-- body text -->
-    <div class="basic">
-        <div class="text middle" data-text="Thanks!">Thanks!   
-          </div>      
-        <div class="one" style="padding: 200px 50px;"> We really appreciate your compliance.    
+
+    <!-- blotter  -->
+
+ <div class="container1">
+  <div class="blotter-text1" style="font-family: 'Libre Franklin', sans-serif;"></div>
+</div>
+
+
+    <script>
+      const text = new Blotter.Text("How rude", {
+          size: 100,
+          weight: 550,
+          fill: '#0000f0',  
+      
+      })
+
+      let material = new Blotter.LiquidDistortMaterial()
+        material.uniforms.uVolatility.value = .01;
+        material.uniforms.uSpeed.value = .01;
+        material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+      let blotter = new Blotter(material, { texts: text })
+
+      let scope = blotter.forText(text)
+      let blotter_text_container = document.querySelector('.blotter-text1')
+      scope.appendTo(blotter_text_container)
+      let x_center,  y_center
+
+      document.onmousemove = moveIt;
+    function moveIt(event) {
+
+        material.uniforms.uVolatility.value = (event.clientX * .00002);
+        material.uniforms.uSpeed.value = (event.clientX * .011);
+        material.uniforms.uSeed.value = (event.clientX * .00001);
+    }
+  </script>
+    <div class="basic">     
+        <div class="one" style="padding: 50px 50px;"> We're only trying to help.    
     </div>
 
     <div class="navarrows">

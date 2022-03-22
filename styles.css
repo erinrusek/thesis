@@ -748,3 +748,109 @@ from { opacity: 0; }
 to   { opacity: 1; }
 
 }
+
+/* BLOTTER  */
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  padding-top: 15em;
+}
+
+.blotter-text{
+  display: block;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 30pt;
+}
+
+
+/* BLOTTER on 15_goodend.html  */
+.container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  padding-top: 10em;
+  padding-bottom: 20px;
+}
+
+.blotter-text1{
+  display: block;
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: center;
+  font-size: 30pt;
+}
+
+/* BLOTTER on good2.html  */
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding-top: 10em;
+  padding-bottom: 1em;
+}
+
+.blotter-text2{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 30pt;
+}
+
+
+
+/* BLOTTER on good3.html  */
+.container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  padding-top: 10em;
+  padding-bottom: 0em;
+  
+}
+
+.blotter-text3{
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 55pt;
+
+}
+
+
+/* BLOTTER on good5.html  */
+.container5{
+  /* display: flex; */
+  position: absolute;
+  z-index: -10;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10px;
+  padding-top: 2em;
+  padding-left: 8em;
+  padding-bottom: 10em;
+  opacity: 0.5;
+  
+}
+
+.blotter-text5{
+  position: relative;
+  z-index: -10;
+  font-family: 'Noto Sans', sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* left: 9em; */
+  font-size: 55pt;
+  color: #ff003c;
+}

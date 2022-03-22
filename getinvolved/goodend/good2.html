@@ -20,6 +20,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+     <!-- BLOTTER.JS  -->
+     <script src="../../blotter.min.js"> </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -59,7 +63,7 @@
 
 
     <!-- body text -->
-    <img src="../../img/white_smiley.png" alt="Paris"
+    <img src="../../img/whiteglitch.gif" alt="Paris"
     style="
     z-index: -3;
     width: 10%;
@@ -69,7 +73,46 @@
     margin-bottom: -170px;
     margin-top: 80px;">
 
-        <div class="one" style="padding-top: 200px;"> Would you please tell us where you found your "Safeguard" extension?</div>   
+        <!-- <div class="one" style="padding-top: 200px;"> Would you please tell us where you found your "Safeguard" extension?</div>    -->
+
+
+
+          <!-- blotter  -->
+
+    <div class="container2">
+      <div class="blotter-text2"></div>
+    </div>
+    
+        <script>
+
+
+          const text = new Blotter.Text('Would you please tell us where you found your "Safeguard" extension?', {
+              size: 30,
+              weight: 700,
+              fill: 'white',
+              paddingTop: '-10',
+          })
+
+          let material = new Blotter.LiquidDistortMaterial()
+            material.uniforms.uVolatility.value = .01;
+            material.uniforms.uSpeed.value = .01;
+            material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+          let blotter = new Blotter(material, { texts: text })
+
+          let scope = blotter.forText(text)
+          let blotter_text_container = document.querySelector('.blotter-text2')
+          scope.appendTo(blotter_text_container)
+          let x_center,  y_center
+
+          document.onmousemove = moveIt;
+        function moveIt(event) {
+
+            material.uniforms.uVolatility.value = (event.clientX * .00001);
+            material.uniforms.uSpeed.value = (event.clientX * .011);
+            material.uniforms.uSeed.value = (event.clientX * .0001);
+        }
+      </script>
 
     <!-- buttons  -->
     <button onclick="window.location.href='../badend/24.html'" class="button button2" class="button">Search engine (Google, Safari, etc.)</button>

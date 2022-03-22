@@ -20,6 +20,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+     <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+ 
+ 
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -56,11 +62,46 @@
           <li><a href="index.html">Get Involved</a></li>
           <li><a href="about/index.html">About</a></li> -->
         </ul>
+<!-- blotter  -->
 
+<div class="container3">
+  <div class="blotter-text3"></div>
+</div>
+
+
+    <script>
+      const text = new Blotter.Text("You see:", {
+          size: 100,
+          weight: 600,
+          fill: 'white',
+  
+      
+      })
+
+      let material = new Blotter.LiquidDistortMaterial()
+        material.uniforms.uVolatility.value = .01;
+        material.uniforms.uSpeed.value = .01;
+        material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+      let blotter = new Blotter(material, { texts: text })
+
+      let scope = blotter.forText(text)
+      let blotter_text_container = document.querySelector('.blotter-text3')
+      scope.appendTo(blotter_text_container)
+      let x_center,  y_center
+
+      document.onmousemove = moveIt;
+    function moveIt(event) {
+
+        material.uniforms.uVolatility.value = (event.clientX * .00004);
+        material.uniforms.uSpeed.value = (event.clientX * .011);
+        material.uniforms.uSeed.value = (event.clientX * .00001);
+    }
+  </script>
 
      <!-- body text -->
-     <div class="main" style="margin-top: 5%;">
-        You see, in order to advance humanity’s social abilities, we <a href="../trueend/index.html">need</a> participants who are willing to be vulnerable with us.      
+     <div class="main" style="margin-top: 1%;">
+        In order to advance humanity’s social abilities, we <a href="../trueend/index.html">need</a> participants who are willing to be vulnerable with us.      
   
       <div class="navarrows">
           <!-- <a href="https://www.qries.com/">
@@ -68,8 +109,8 @@
               width="10%" height="auto" style="float: left; padding-left: 400px;">
            </a>  -->
            <a href="good5.html">
-              <img alt="Qries" src="../../img/rightarrow.png"
-              width="10%" height="auto" >
+              <img alt="Qries" src="../../img/rightarrow2.gif"
+              width="15%" height="auto" >
            </a>
       </div>
 
