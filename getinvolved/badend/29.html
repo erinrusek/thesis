@@ -19,6 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 
+ <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+
     <!-- nav bar style -->
     <style>
         ul {
@@ -56,18 +60,69 @@
           <li><a href="about/index.html">About</a></li> -->
         </ul>
 
-   
+
+        <style>
+          html, body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100vh;
+          align-items: center;
+      }
+
+      div {
+          padding-top: 400px;
+          text-align: center;
+      }
+        </style>
+
+        <div id="main"></div>
+
+        <script>
+        
+            container = document.getElementById("main");
+        
+            var text = new Blotter.Text("That's why we're asking you directly", {
+                family: "serif",
+                size: 50,
+                fill: "#fff",
+                paddingLeft: 100,
+                paddingRight: 700,
+                paddingBottom: 10,
+                paddinfTop: 10,
+            })
+        
+            var material = new Blotter.LiquidDistortMaterial();
+            material.uniforms.uVolatility.value = .21;
+            material.uniforms.uSpeed.value = .1;
+            material.uniforms.uSeed.value = .11; // 0 false, 1 true
+          
+            var blotter = new Blotter(material, {
+                texts: text
+            })
+        
+            var scope = blotter.forText(text);
+        
+            scope.appendTo(container);
+                
+            // document.onmousemove = moveIt;
+            // function moveIt(event) {
+            //     material.uniforms.uRotation.value = (event.clientX * .1);
+            //     material.uniforms.uOffset.value = (event.clientX * 0.0001);
+            // }
+        
+        </script>
 
     <!-- body text -->
-      <div class="main" style="margin: 200px 30px 90px 90px; padding: 90px 0px;">  That’s why we’re asking you directly </div>
+      <!-- <div class="main" style="margin: 200px 30px 90px 90px; padding: 90px 0px;">  That’s why we’re asking you directly </div> -->
 
     <div class="navarrows">
         <a href="28.html">
-            <img alt="Qries" src="../../img/leftarrow.png"
-            width="10%" height="auto" style="float: left; padding-left: 400px; padding-top: 0;">
+            <img alt="Qries" src="../../img/leftarrow3.gif"
+            width="10%" height="auto" style="float: left; padding-left: 400px; padding-top: 0; padding-bottom: 20%;">
          </a> 
          <a href="30.html">
-            <img alt="Qries" src="../../img/rightarrow.png"
+            <img alt="Qries" src="../../img/rightarrow3.gif"
             width="10%" height="auto" style="float: left; padding-left: 400px;">
          </a>
     </div>
