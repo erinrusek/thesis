@@ -12,9 +12,73 @@
             alert('WHOOPS! There is an issue. We can’t seem to connect to Quick Connect’s servers ---');
         }
         </script>
+
+         <!-- BLOTTER.JS  -->
+    <script src="../../blotter.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.js"></script>
 </head>
 <body>
     
+
+    <div class="container">
+        <div class="blotter-text"></div>
+      </div>
+
+      <style>
+          .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .blotter-text{
+            display: block;
+        }
+      </style>
+
+      <script>
+          const text = new Blotter.Text('Click Around. Don’t be scared.', {
+            family: "Noto Sans",
+            size: 100,
+            weight: 700,
+            paddingTop: 80,
+            paddingBottom: 80,
+            fill: "#fff",
+        })
+
+        let material = new Blotter.ChannelSplitMaterial()
+        material.uniforms.uOffset.value = 0.05
+        material.uniforms.uRotation.value = 45
+        material.uniforms.uApplyBlur.value = 1
+        material.uniforms.uAnimateNoise.value = 1
+
+        let blotter = new Blotter(material, { texts: text })
+
+        let scope = blotter.forText(text)
+        let blotter_text_container = document.querySelector('.blotter-text')
+        scope.appendTo(blotter_text_container)
+        let x_center,  y_center
+
+        window.addEventListener("mousemove", function(e){
+            x_center = blotter_text_container.offsetLeft + ( blotter_text_container.scrollWidth / 2 ) 
+            y_center = blotter_text_container.offsetTop + ( blotter_text_container.scrollHeight / 2 )
+            
+            material.uniforms.uOffset.value = ( Math.abs(x_center - e.clientX ) + Math.abs(y_center - e.clientY ) )/ 5000
+            material.uniforms.uRotation.value = angle( e.clientX, e.clientY)
+        })
+
+        function angle(x_cursor, y_cursor) {
+            let dy = y_cursor - y_center
+            let dx = x_cursor - x_center
+            let theta = Math.atan2(dy, dx)
+            theta *= 180 / Math.PI
+            if (theta < 0) theta = 360 + theta 
+            return theta
+        }
+      </script>
+    <!-- blotter source credit: Vincent Mancini https://codepen.io/am-77/pen/Poqyoxg  -->
+      
     <!-- image link  -->
     <div id="lH">
         <audio controls id="aH">
@@ -29,7 +93,7 @@
     </div>
 
     <!-- back ground  -->
-    <div id="bg">
+    <div id="bg" style="z-index: -1;">
         <img src="../../img/static.gif" alt="">
       </div>
 
