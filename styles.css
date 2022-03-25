@@ -256,7 +256,7 @@ input[type='checkbox'] {
     border:2px solid white;
 }
 input[type='checkbox']:checked {
-    background: #36575c;
+    background: red;
 }
 
 
