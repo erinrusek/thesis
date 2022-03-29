@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘺𝘰𝘶𝘳 𝘯𝘦𝘸 𝘭𝘪𝘧𝘦</title>
+<title>𝘣𝘦 𝘸𝘦𝘭𝘭</title>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+
 <!-- favicon -->
 <link rel="shortcut icon" type="image/png" href="../../img/the_cloud.png">
-
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
 
 <!-- red hat mono  -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <a href="index.html">link to home</a>
+    <a href="index.html"></a>
 
 
     <img src="../../img/forest.gif" id="bg" alt="">
@@ -28,15 +29,15 @@
   position: fixed; 
   top: 0; 
   left: 0; 
+  
 	
   /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
+
+  
 }
 
-body {
-  cursor: pointer;
-}
 </style>
 
 
@@ -63,24 +64,31 @@ body {
 
 <!-- text appear -->
 <div class="parallax-window" data-parallax="scroll" data-image-src="/wp-content/themes/TheBullshitCollection/Images/white-background.jpg">
-    <div class="welcome-page-div">
-      <h3 style="font-family: 'Red Hat Mono', monospace; padding-left: 2%;">This is your auto-generated happy place. <br>Would you like to stay here? <br><br>  
-        
-        <a href="happy_place.html">Yes</a> or <a href="imaginary3.html">No</a></h3>
+    <div class="welcome-page-div" style="">
+    <div class="welcome-page-div" style="font-family: 'Red Hat Mono', monospace; padding-left: 2%;">
+      <h3> You could stay here forever, couldn't you? <br> 
     </div>
+
+    <script>
+      var delayInMilliseconds = 7000; 
+
+setTimeout(function() {
+if (window.confirm('You became lost in your generated world. Would you like to try again?'))
+   {
+   window.open('../../getinvolved/index.html', '_blank');
+   };
+  }, delayInMilliseconds);
+    </script>
   
-    <section id="section5" class="demo">
-      <a href="#section5"><span></span>Scroll</a>
-    </section>
   </div>
 
 <style>
     @keyframes chainReaction {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -96,11 +104,16 @@ body {
 
 }
 
+/* .hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+} */
 </style>
 
 
 
-<iframe src="https://www.youtube.com/embed/8plwv25NYRo?autoplay=1&loop=1&controls=0" width="560" height="315" frameborder="0" style="position: relative; opacity: 0;"></iframe>
+<iframe src="https://www.youtube.com/embed/8plwv25NYRo?autoplay=1&loop=1&controls=0" width="1000" height="1000" frameborder="0" style="position: relative; opacity: 0;"></iframe>
 
 </body>
 </html>

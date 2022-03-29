@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘵𝘩𝘦 𝘢𝘪𝘳 𝘪𝘴 𝘤𝘢𝘭𝘮, 𝘪𝘴𝘯'𝘵 𝘪𝘵?
+
+    </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../../img/the_cloud.png">
+    <!-- css -->
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- noto sans regular -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <!-- libre franklin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+
+    <!-- red hat mono  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+</head>
+<body>
+   
+
+
+
+
+    <!-- body text -->
+    <div class="truemain" style="text-align: center;">
+        Reading client data: <br><br> 
+    </div>
+
+
+
+
+
+    <!-- display time  -->
+
+    <div id="digital-clock" style="font-family: 'Red Hat Mono', monospace;
+    color: #FDFFA1;
+    text-align: justify;
+    position: relative;
+    padding: 0px 700px 0px 700px;
+    top: 40%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;"></div>
+    <script>
+
+function getDateTime() {
+        var now     = new Date(); 
+        var year    = now.getFullYear();
+        var month   = now.getMonth()+1; 
+        var day     = now.getDate();
+        var hour    = now.getHours();
+        var minute  = now.getMinutes();
+        var second  = now.getSeconds(); 
+        if(month.toString().length == 1) {
+             month = '0'+month;
+        }
+        if(day.toString().length == 1) {
+             day = '0'+day;
+        }   
+        if(hour.toString().length == 1) {
+             hour = '0'+hour;
+        }
+        if(minute.toString().length == 1) {
+             minute = '0'+minute;
+        }
+        if(second.toString().length == 1) {
+             second = '0'+second;
+        }   
+        var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute+':'+second;   
+         return dateTime;
+    }
+
+    // example usage: realtime clock
+    setInterval(function(){
+        currentTime = getDateTime();
+        document.getElementById("digital-clock").innerHTML = "Current date and client local time ⟶ " + currentTime;
+    }, 1000);
+    </script>
+
+
+    <!-- cookies enabled  -->
+    <p id="demo" style="font-family: 'Red Hat Mono', monospace;
+    color: #FDFFA1;
+    text-align: justify;
+    position: relative;
+    padding: 0px 700px 0px 700px;
+    top: 40%;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML =
+    "Cookies on this site are enabled ⟶ " + navigator.cookieEnabled;
+    </script>
+    
+   
+
+
+
+
+  <!-- find location  -->
+
+  <div id="location" style="font-family: 'Red Hat Mono', monospace;
+  color: #FDFFA1;
+  text-align: justify;
+  position: relative;
+  padding: 0px 700px 0px 700px;
+  top: 40%;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+-moz-animation: fadein 2s; /* Firefox < 16 */
+ -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+     animation: fadein 2s;"></div>
+  <script>
+    var div  = document.getElementById("location");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+      } else {
+        div.innerHTML = "The Browser Does not Support Geolocation";
+      }
+    }
+
+    function showPosition(position) {
+      div.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    }
+    getLocation();
+
+
+
+var geocoder;
+function initialize() {
+    geocoder = new google.maps.Geocoder();
+}
+
+function codeLatLng(lat, lng) {
+    var latlng = new google.maps.LatLng(lat, lng);
+    geocoder.geocode({'latLng': latlng}, function(results, status) {
+      if(status == google.maps.GeocoderStatus.OK) {
+          console.log(results)
+          if(results[1]) {
+              //formatted address
+              var address = results[0].formatted_address;
+              alert("address = " + address);
+          } else {
+              alert("No results found");
+          }
+      } else {
+          alert("Geocoder failed due to: " + status);
+      }
+    });
+}
+  </script>
+
+<div class="truemain" style="text-align: center;">
+    <br><br>  <a href="imaginary2.html" style="font-family: 'Red Hat Mono', monospace;
+    color: aqua;
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 60s; /* Firefox < 16 */
+   -ms-animation: fadein 60s; /* Internet Explorer */
+    -o-animation: fadein 60s; /* Opera < 12.1 */
+       animation: fadein 60s;">  Generate my happy place  </a>
+</div>
+
+
+    <!-- <div class="navarrows">
+        <a href="1.html">
+            <img alt="Qries" src="../../img/leftarrow.png"
+            width="10%" height="auto" style="float: left; padding-left: 400px;">
+         </a> 
+         <a href="3.html">
+            <img alt="Qries" src="../../img/rightarrow.png"
+            width="10%" height="auto" style="float: left; padding-left: 400px;">
+         </a>
+    </div> -->
+
+    <!-- doc color -->
+    <script type="text/javascript">
+        document.body.style.backgroundColor = '#000000';
+    </script>
+</body>
+</html>
