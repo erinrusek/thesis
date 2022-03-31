@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Test</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../../img/smiley.png">
+    <!-- css -->
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- noto sans regular -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <!-- libre franklin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+
+    <!-- BLOTTER.JS  -->
+  <script src="../../blotter.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js"></script>
+ 
+
+
+    <!-- nav bar style -->
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 25px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          /* background-color: #111; */
+          text-decoration: underline;
+        }
+        </style>
+
+        <!-- alert  -->
+        <script type="text/javascript">
+            window.onload = function(){//window.addEventListener('load',function(){...}); (for Netscape) and window.attachEvent('onload',function(){...}); (for IE and Opera) also work
+                alert('Phew, glad we could get you back to our site! You didn’t see anything strange when you were disconnected, did you?');
+            }
+            </script>
+</head>
+<body>
+    <!-- nav bar links -->
+        <ul>
+          <li><a href="../../index.html" style="font-family: 'Libre Franklin', sans-serif; font-size: 20pt; line-height: 7mm; text-decoration: none;"><img src="../../img/1.png"  style="width: 30%; margin-right: 200%; margin-bottom: -20px;"></a></li>
+          <!-- <li><a class="active" href="../index.html">Home</a></li>
+          <li><a href="ourmission/index.html">Our Mission</a></li>
+          <li><a href="index.html">Get Involved</a></li>
+          <li><a href="about/index.html">About</a></li> -->
+        </ul>
+
+        <!-- blotter  -->
+
+ <div class="container2">
+  <div class="blotter-text2"></div>
+</div>
+
+
+    <script>
+      const text = new Blotter.Text("Quick Connect has resolved the abnormality", {
+          size: 45,
+          weight: 500,
+          fill: 'white',  
+      })
+
+      let material = new Blotter.LiquidDistortMaterial()
+        material.uniforms.uVolatility.value = .01;
+        material.uniforms.uSpeed.value = .01;
+        material.uniforms.uSeed.value = .01; // 0 false, 1 true
+
+      let blotter = new Blotter(material, { texts: text })
+
+      let scope = blotter.forText(text)
+      let blotter_text_container = document.querySelector('.blotter-text2')
+      scope.appendTo(blotter_text_container)
+      let x_center,  y_center
+
+      document.onmousemove = moveIt;
+    function moveIt(event) {
+
+        material.uniforms.uVolatility.value = (event.clientX * .00001);
+        material.uniforms.uSpeed.value = (event.clientX * .001);
+        material.uniforms.uSeed.value = (event.clientX * .00001);
+    }
+  </script>
+        
+    <!-- body text -->
+    <!-- <div class="one" style="margin: 70px 0px 0px 0px; padding: 0px 0px 0px 0px;">
+        You have been ejected from the Quick Connect Beta Testing Pool.
+        </div> -->
+      
+        <dl class="listone" style="margin: 0px 0px 0px 350px;">
+          <dt></dt>
+          <dd>- <i> D̵̹̥̞̮͈͔̮̰͗͗͆͌̈ȩ̵̧̧̪͍͔̭̖̻̠̔̉̽̆̒̉̇́̎̕c̴̨̛̗͓̫̣͈̦̎̆̌͑̉ͅě̷̜̰͇̙̥̑̆̇͌̀̏͘͜͝p̵̮̼̃̈̀̈́͝t̴̘̜́̈̐͆́ȉ̴̢̜̼͈͙̔̑͗̽͊̎ò̶̡̧̭̙̻̞͔͑͌̀͑̓̚̕͠n̶̦̖͖̐͗͜ͅ:̶̧̟̙͚̝͔͖̱̝̍̿ ̶̧̔̂̀͑̚N̷̨̗͉͖̞̍͋͜͜U̴̧̡͇̳̅̉̾̽̌͛͘͘͜͝͠ͅL̸̛͖̤̖̮̏͛̑͋̐̽L̶̛͕̗̭̆̒͗̃̋̀̂̾ </i></dd>
+          <dd>- <i>̷̨͉̺̕Ư̵͎̞̫̪̩̥̈́̐́͗s̶͉̮̞̦̾̊͑͜͠ẹ̴̖͎̖͍̠̬̒́͗̒͝r̵̢̬̙̣͍͊̂͛̅̒͠ ̷͓͂͝c̴̤͎̽̀͑̿͐ò̶̡̨̪̬͍͍̲̝̤̄m̸̨̢̧̭̟̭̲̃͊͋̓̋͗̚͝͠ͅṕ̷̻̝̥͍͉͇̠́͐̇͋̈́̀̾l̷̥͇͍͔̈́͊͋̿͝ḭ̴͎̝̻͚͈̰̈̀̋̔͋̄͊̓̈́̚a̴̗̗͊̆́̊̔̒̚͝n̵̤͓͖̱̫͎̯̞̻̬͆̀̈͠ç̷̢̥͇̪͕͈̮̜̲̒̑͛e̶̘̓́̃̑͊͒͊̕͠:̸̖̓̒́̈́̇̈́̓̕͝ ̸̛̦̞̄͐̏̑͠N̵̨̼͔̜͍͕͌̀̂͋̌͛̕͜͠Ū̶̪̍̂͐̀̕͠Ḷ̸͔̩͚̩̯̹͇̦͊̏͑͒͜L̸͕̘̱͍͇̀̈̅̌͗̿̾̊͌͘ͅ </i></dd>
+          <dd>- <i>̶̡͉̼͉̞͒͛̓̆̒͐̆̂T̸̟̜̞͎̹̭͓̀a̸̠̲̠̮͎͉͘͜s̵͚͗̈k̴͈̳͎̜̒͜ͅ:̸̨͚̻̟̌͐̚ͅ ̷̩̆̀́̔͛̉̎͛Ú̵̫̜̩̺͊̈́͝Ṋ̸̟́͋̅D̴̨̫̾̾̈́̆̊E̵̺̫̳͑͛̀̓͜T̷̯͕͓̩̰̯͊̋̄̋̕͠ͅÈ̸̻̫̙̤͔̼̀͒̇͜ͅȒ̵͍̎͛̇̓̎̑͠M̴̧̨̞̗͎͉̳̲̑̀͗̊̈́̉͐̿͠Ĩ̵̤̯̟͎̟̚͜͜N̴̯͓̟͂̌̊̆̈̃͘̚͝E̷̬̯̟̪͉͓͉͉͌̀̔̓͝D̵̘̩͍̞̒ </i></dd>
+          <dd>- <i≯̧̰̠̘̞̯͎̟͍̭̾͛̾̓̍͊͝͝P̵̧̣̬͙̜̩͕͉̾e̷̡͇̗̳͕͙̗̼̦̹̒̄͌́̊̂̍̕̚͝ŕ̷̰̺͋̓̈́̐͝s̸̙̎o̸̝͉̮̦͕̝̠͕̹͎͊̑͛͊̀̐̑̃͝n̸̰̬̼̬͋́̀͛͆̆ą̸̧̢̛̗̖̱͌̀̀͆̚l̶̡̹̋̔ ̵͇͓̓̓ī̸̢̳̫̫̺̇̌̈́̈n̸̗̣̱̿͂̅̈́́̀̈́̆̽f̷̗̑͐̈͐̄͒̈́͆̎͝ö̸̯̹͖́̃̊́̅̃́̇͜͠r̷͙̖̱̥̳̄̔́̄m̶̡̫̮͍̠̼̈́̔̇̂ą̶͇̦̞͑̏̒̀̉̎̃͝t̴̢̗͔͙̐̔̀̔́͜ͅį̷̺͚̺̲̪̣͎̀̀̑̾̅́̄ǫ̴̜̯͔͕̌̎̏̀͑͂̈̓̂͝ň̸͉̈́̽̊̿̇̚ͅ ̵͙̩̖̗̮̬͖̞̺̹̃̈́̓a̷̞͖͙̲͙͑̈̽̀̀͘͜͝t̸̮̮͇̻̳̪͍̓̇̉̽̃̈́͑͠t̶̪̀̾̊͂ạ̷̮̖̙̞̀́́̋͌͘͠ï̵̧̩̹̼͕̇̒̓͐̈́̕n̶̢̕͜ê̵̜̗͂d̸̞̙̰͚̩̭͙̫͍̂̋͆͜͝:̴̨̳̝͔̈̀̈̉ ̴̥̤̖̗͋̀̑Ņ̶͔̻͍̻̓͆́̎̌̈́͒͊̀U̵̮͔̼̒́Ḽ̸͚̫̼̮̙̽͆́͛̔̔̃̓͜L</i></dd>
+          <dd style="color: red;">- <i>P̶̡̢̳͎͔̩̣̱̀̔̋͒͑̒͂̐̀̓ớ̸̦̹̘͖̱̊̈̂̋̂͠͠ş̵͎̱̪̰̐̄̒͑̐̎̏͝s̸͇͔͌͌̀̀́͌̎i̸̻̪̹̮̯̲͛̂͊͂b̴̻̩͖͇̳̖͌͌̾ͅl̵̨̨̫̬̬͒̂̇̄͛̽̽͠e̷̗̽ͅ ̶̥̤̭̔̉̒̔̅̄̊o̷̡̝̖̯͉͍̬̞̭͋̑̏̎̈́̓̾̕͜u̴͕̻̞̺̯̟͍̼̒̊̀̌̈́̚͜t̸͍͙͋̀̌̈́͛͆̒̚c̷̢̦͈̪̥̬̙̹̙͊̈́̐̐̿͗̔͆͛ͅo̴̭̹̜͍̰͋̇́̒̕͜ͅm̵̢̢̭̤̪̖̹͊̈́̀̂̽̿e̸͖͎͐̄s̵̺͑:̸̧̨̯̭̤̭͓͖̫̇͑̓̓̉̊̈̕͘̕ͅ ̶̧̬̦̝̭̠̮̮͚̫͐͐̉̑̌̀̋̏͝4̵͚̈́̀̔/̵̪̮͍̃̑4̵̙́ </i></dd>
+    
+        </dl>
+        
+        <!-- retry  -->
+  
+        <a href="../../getinvolved/index.html">
+          <img alt="retry" src="../../img/retryglitch.gif"
+         style="display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 5%;
+         margin-bottom: -20px;">
+       </a>
+  
+        <div class="redo">
+            redo tutorial?
+        </div>
+  
+      <!-- background image  -->
+      <!-- <div id="bgseven">
+        <img src="../../img/glitch.gif" alt="">
+      </div> -->
+    <!-- doc color -->
+    <script type="text/javascript">
+        document.body.style.backgroundColor = '#000';
+    </script>
+
+</body>
+</html>
