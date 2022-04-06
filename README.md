@@ -1,6 +1,13 @@
 # thesis
 Thesis 2022
 
+As the trading of personal data on the internet becomes increasingly prevalent, our relationship with the web grows more and more vague. When we write a friend on social media or use the computer to browse the internet, our every step is tracked. Personal data is a major source of income for those constructing the platforms we use to connect with each other. As tactics to track our information strive to be more aggressive, we are becoming less knowledgeable about the inner workings of the internet while growing ever more reliant on our devices. 
+
+Quick connect is a satirical startup site with a scheming, self-aware interface. Quick connect highlights how the design of web platforms has taken a turn to extract as much personal information from us in as little time as possible. Throughout the experience, the user must work to protect their data from mischievous browser cookies, intimidating FTC warnings, and seemingly innocuous terms of service documents. If the user can navigate the site successfully, the truth behind how their personal information is being used behind the scenes is revealed to them. 
+
+Quick connect presents a scenario set in the future that exposes a developing issue regarding our personal data in the present. This future sees apps, browsers, and websites free to access our data and use it however they please. If companies are allowed to continue collecting our personal information, an internet that exists outside of the public’s control is entirely possible.
+
+Code can be viewed on master branch
 
 <!-- many many thanks to the wonderful, dedicated, coders and journalists who made this thesis project possible.
 
