@@ -1,5 +1,5 @@
 # thesis
-Thesis 2022
+Quick Connect - Parsons Thesis 2022
 
 As the trading of personal data on the internet becomes increasingly prevalent, our relationship with the web grows more and more vague. When we write a friend on social media or use the computer to browse the internet, our every step is tracked. Personal data is a major source of income for those constructing the platforms we use to connect with each other. As tactics to track our information strive to be more aggressive, we are becoming less knowledgeable about the inner workings of the internet while growing ever more reliant on our devices. 
 
