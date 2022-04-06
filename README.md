@@ -7,7 +7,7 @@ Quick connect is a satirical startup site with a scheming, self-aware interface.
 
 Quick connect presents a scenario set in the future that exposes a developing issue regarding our personal data in the present. This future sees apps, browsers, and websites free to access our data and use it however they please. If companies are allowed to continue collecting our personal information, an internet that exists outside of the public’s control is entirely possible.
 
-Code can be viewed on master branch
+Full code can be viewed on master branch
 
 <!-- many many thanks to the wonderful, dedicated, coders and journalists who made this thesis project possible.
 
